@@ -1,6 +1,7 @@
 package com.xdj.spring.boot.config;
 
 import com.xdj.spring.boot.interceptor.CheckHandlerInterceptor;
+import com.xdj.spring.boot.interceptor.CheckHandlerInterceptor2;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -17,5 +18,6 @@ public class WebConfig implements WebMvcConfigurer
     public void addInterceptors(InterceptorRegistry registry)
     {
         registry.addInterceptor(new CheckHandlerInterceptor()).addPathPatterns("/user/*");
+//        registry.addInterceptor(new CheckHandlerInterceptor2()).addPathPatterns("/user/*");
     }
 }
