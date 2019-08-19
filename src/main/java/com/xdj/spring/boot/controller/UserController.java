@@ -16,4 +16,25 @@ public class UserController
         System.out.println("calling getMoney.");
         return Integer.MAX_VALUE;
     }
+
+    @RequestMapping("/name")
+    public String getName()
+    {
+        System.out.println("calling getName.");
+        return "DJMAIN";
+    }
+
+    @RequestMapping("/forbidden")
+    public String forbidden()
+    {
+        System.out.println("calling forbidden.");
+        return "forbidden";
+    }
+
+    @RequestMapping("/test/1")
+    public String test()
+    {
+        System.out.println("test");
+        return "test";
+    }
 }
